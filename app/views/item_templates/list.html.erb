@@ -1,0 +1,34 @@
+<div class="main-container">
+<div class="image-row">
+  <img class="avatar-image" src="Kothari_Aditya.jpg" alt="Aditya Kothari headshot">
+</div>
+
+<div class="name-row">
+  Aditya Kothari
+</div>
+
+<div class="social-icons-row">
+  <a href="https://github.com/akothar0" target="_blank">
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/in/kothariaditya/" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/guysitsmeaditya/" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+
+
+<div class = "links-row">
+<% @list_of_items.each do |the_item| %>
+ <div class = "item">
+  <img src="<%= the_item.thumbnail_url %>" class= "thumbnail">
+  <a class="link-text" target="_blank" href="<%= the_item.link_url %>">
+    <%= the_item.link_description %>
+  </a>
+ </div>
+<% end %>
+</div>
